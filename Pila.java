@@ -1,5 +1,5 @@
 public class Pila {
-    private Nodo tope;
+    private Nod0 tope;
     private int tamanio;
 
     public Pila() {
@@ -8,7 +8,7 @@ public class Pila {
     }
 
     public void push(Token token) {
-        Nodo nuevo = new Nodo(token);
+        Nod0 nuevo = new Nod0(token);
         nuevo.setSiguiente(tope);
         tope = nuevo;
         tamanio++;
@@ -47,7 +47,7 @@ public class Pila {
             return;
         }
         System.out.println("   +--------------------+");
-        Nodo actual = tope;
+        Nod0 actual = tope;
         while (actual != null) {
             String marca = (actual == tope) ? "  <- TOPE" : "";
             System.out.printf("   | %-18s |%s%n", actual.getDato(), marca);
@@ -62,7 +62,7 @@ public class Pila {
             return "[ vacia ]";
         }
         StringBuilder sb = new StringBuilder("[ TOPE -> ");
-        Nodo actual = tope;
+        Nod0 actual = tope;
         while (actual != null) {
             sb.append(actual.getDato());
             if (actual.getSiguiente() != null) {
